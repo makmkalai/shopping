@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav_container">
+        <nav class="first_nav">
+            <div class="title">
+                <a href="#"><img src="/static/images/meeshoLogo.svg" alt=""></a>
+            </div>
+            <div class="form">
+                <form>
+                    <input type="search" name="search" placeholder="Try Saree,Kurti or search by Product Code">
+                </form>
+            </div>
+            <div class="dwn">
+                <ul>
+                    <li><a href="#"><i class="fa fa-mobile">&nbsp;&nbsp;</i>Download App</a>
+                        <ul>
+                            <div class="dwn_app">
+                                <li><Span>Download Form</Span></li><br>
+                                <li><a href="#"><img src="/static/images/first navbar/playstore.png" alt=""></a></li>
+                                <br>
+                                <li><a href="#"><img src="/static/images/first navbar/appstore.png" alt=""></a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <a href="#">Become a Supplier</a>
+            <a href="#">Newsroom</a>
+            <div class="profile">
+                <div class="profile_icon">
+                    <ul>
+                        <li>
+                            <div class="pro">
+                                <i class="fa fa-user-circle"></i>
+                                <a href="#">Profile</a>
+                            </div>
+                            <ul>
+                                <div class="profile_icon_signup">
+                                    <div class="signup">
+                                        <li>
+                                            <h3>Hello User</h3>
+                                        </li>
+                                        <li>
+                                            <p>Meesho account</p>
+                                        </li>
+                                        <li><a class="sign_btn" href="#">{{session['username']}}</a></li>
+                                        <hr>
+                                        <li><a href="#"><i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;My Order</a></li>
+                                        <hr>
+                                        <li><a class="dlt_acc" href="{{url_for('logout')}}">Logout</a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+            </div>
+            <div class="cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <a href="{{url_for('shopping_cart')}}">Cart</a>
+            </div>
+        </nav>
+    
+    </div>
+    <hr>
+    
+    <div class="nav_container">
+        <nav class="sec_nav">
+            <ul class="first_ul">
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Women Ethnic</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>All Women Ethnic</span></li>
+                                <li><a href="#">View All</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Sarees</span></li>
+                                <li><a href="#">All Sarees</a></li>
+                                <li><a href="#">Silk Sarees</a></li>
+                                <li><a href="#">Cotton Silk Sarees</a></li>
+                                <li><a href="#">Cotton Sarees</a></li>
+                                <li><a href="#">Georgette Sarees</a></li>
+                                <li><a href="#">Chiffon Sarees</a></li>
+                                <li><a href="#">Satin Sarees</a></li>
+                                <li><a href="#">Embroidered Sarees</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Kurtis</span></li>
+                                <li><a href="#">All Kurtis</a></li>
+                                <li><a href="#">Anarkali Kurtis</a></li>
+                                <li><a href="#">Rayon Kurtis</a></li>
+                                <li><a href="#">Cotton Kurtis</a></li>
+                                <li><a href="#">Embriudered Kurtis</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Kurta sets</span></li>
+                                <li><a href="#">All Kurta Sets</a></li><br>
+                            </div>
+                            <div class="five">
+                                <li><span>Suits & Dress Meterial</span></li>
+                                <li><a href="#">All Suits & Dress Meterial</a></li>
+                                <li><a href="#">Cotton Suits</a></li>
+                                <li><a href="#">Embroidered Suits</a></li>
+                                <li><a href="#">chanderi Suits</a></li><br>
+                            </div>
+                            <div class="six">
+                                <li><span>Other Ethnic</span></li>
+                                <li><a href="#">Blouses</a></li>
+                                <li><a href="#">Dupattas</a></li>
+                                <li><a href="#">Lehanga</a></li>
+                                <li><a href="#">Gown</a></li>
+                                <li><a href="#">Ethnic Bottomwear</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Women Western</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Topwear</span></li>
+                                <li><a href="#">Tops</a></li>
+                                <li><a href="#">Dresses</a></li>
+                                <li><a href="#">Sweaters</a></li>
+                                <li><a href="#">Jumpsuits</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Bottomwear</span></li>
+                                <li><a href="#">Jeans</a></li>
+                                <li><a href="#">jeggings</a></li>
+                                <li><a href="#">Palazzos</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Skirts</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Innerwear</span></li>
+                                <li><a href="#">Bra</a></li>
+                                <li><a href="#">Briefs</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Sleepwear</span></li>
+                                <li><a href="#">Nightsuits</a></li>
+                                <li><a href="#">Babydolls</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Men</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Top Wear</span></li>
+                                <li><a href="#">All Top Wear</a></li>
+                                <li><a href="#">Tshirts</a></li>
+                                <li><a href="#">Shirts</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Bottom Wear</span></li>
+                                <li><a href="#">Track Pants</a></li>
+                                <li><a href="#">Jeans</a></li>
+                                <li><a href="#">Trousers</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Men Accessories</span></li>
+                                <li><a href="#">All Men Accessories</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Belts</a></li>
+                                <li><a href="#">Wallets</a></li>
+                                <li><a href="#">Jewellery</a></li>
+                                <li><a href="#">Sunglasses</a></li>
+                                <li><a href="#">Bags</a></li><br>
+                            </div>
+                            <div class="five">
+                                <li><span>Men Footwear</span></li>
+                                <li><a href="#">Casual Shoes</a></li>
+                                <li><a href="#">Sports Shoes</a></li>
+                                <li><a href="#">Sandals</a></li>
+                                <li><a href="#">Formal Shoes</a></li><br>
+                            </div>
+                            <div class="six">
+                                <li><span>Ethnic Wear</span></li>
+                                <li><a href="#">Men Kurtas</a></li>
+                                <li><a href="#">Ethnic Jackets</a></li><br>
+                            </div>
+                            <div class="seven">
+                                <li><span>Inner & Sleep Wear</span></li>
+                                <li><a href="#">All Inner & Sleep Wear</a></li>
+                                <li><a href="#">Vests</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">kids</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Boys & Girls 2+ Years</span></li>
+                                <li><a href="#">Dresses</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Infant 0-2 Years</span></li>
+                                <li><a href="#">Rompers</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Toys & Accessories</span></li>
+                                <li><a href="#">Soft Toys</a></li>
+                                <li><a href="#">Footwear</a></li>
+                                <li><a href="#">Stationery</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Bags & Backpacks</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Baby Care</span></li>
+                                <li><a href="#">All Baby Care</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Home & Kitchen</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Home Furnishing</span></li>
+                                <li><a href="#">Bedsheets</a></li>
+                                <li><a href="#">Doormats</a></li>
+                                <li><a href="#">Curtains & Sheers</a></li>
+                                <li><a href="#">Cushions & Cushion Covers</a></li>
+                                <li><a href="#">Mattress Protectors</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Home Decor</span></li>
+                                <li><a href="#">All Home Decor</a></li>
+                                <li><a href="#">Stickers</a></li>
+                                <li><a href="#">Clocks</a></li>
+                                <li><a href="#">Showpieces</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Kitchen & Dining</span></li>
+                                <li><a href="#">Kitchen Storage</a></li>
+                                <li><a href="#">Cookware & Bakeware</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Beauty & Health</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Make up</span></li>
+                                <li><a href="#">Face</a></li>
+                                <li><a href="#">Eyes</a></li>
+                                <li><a href="#">Lips</a></li>
+                                <li><a href="#">Nails</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Wellness</span></li>
+                                <li><a href="#">Sanitizers</a></li>
+                                <li><a href="#">Oral Care</a></li>
+                                <li><a href="#">Feminine Hygiene</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Skincare</span></li>
+                                <li><a href="#">Deodorants</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Jewellery & Accessories</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Jewellery</span></li>
+                                <li><a href="#">Jewellery Set</a></li>
+                                <li><a href="#">Earrings</a></li>
+                                <li><a href="#">Mangalsutras</a></li>
+                                <li><a href="#">Studs</a></li>
+                                <li><a href="#">Bangles</a></li>
+                                <li><a href="#">Necklaces</a></li>
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Anklets</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Women Accessory</span></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Hair Accessories</a></li>
+                                <li><a href="#">Sunglasses</a></li>
+                                <li><a href="#">Socks</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Bags & Footwear</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Women Bags</span></li>
+                                <li><a href="#">All Women Bags</a></li>
+                                <li><a href="#">Handbags</a></li>
+                                <li><a href="#">Clutches</a></li>
+                                <li><a href="#">Slingbags</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Men Bags</span></li>
+                                <li><a href="#">All Men Bags</a></li>
+                                <li><a href="#">Men Wallets</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Men Footwear</span></li>
+                                <li><a href="#">Sports Shoes</a></li>
+                                <li><a href="#">Casual Shoes</a></li>
+                                <li><a href="#">Formal shoes</a></li>
+                                <li><a href="#">Sandals</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Women Footwear</span></li>
+                                <li><a href="#">Flats</a></li>
+                                <li><a href="#">Bellies</a></li>
+                                <li><a href="#">Juttis</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Electronics</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Mobile & Accessories</span></li>
+                                <li><a href="#">All Mobile & Accessories</a></li>
+                                <li><a href="#">Smartwatches</a></li>
+                                <li><a href="#">Mobile Holders</a></li>
+                                <li><a href="#">Mobile Cases and Covers</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Appliances</span></li>
+                                <li><a href="#">All Appliances</a></li>
+                                <li><a href="#">Grooming</a></li>
+                                <li><a href="#">Home Applliances</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    
+
+    <div class="container">
+        <div class="first_container">
+            <div class="first_content">
+                <p id="best">Lowest Prices <br>Best Quality Shopping</p><br>
+                <div class="first_shopping">
+                    <div class="free_delivery">
+                        <a href="#"><img src="/static/images/1/free delivery.svg" alt=""></a>
+                        <p>Free <br>Delivery</p>
+                    </div>
+                    <div class="cash_delivery">
+                        <a href="#"><img src="/static/images/1/cash of delivery.svg" alt=""></a>
+                        <p>Cash On <br>Delivery</p>
+                    </div>
+                    <div class="easy_returns">
+                        <a href="#"><img src="/static/images/1/easy returm.svg" alt=""></a>
+                        <p>Easy <br>Returns</p>
+                    </div>
+                </div><br><br>
+                <div class="play">
+                    <img src="/static/images/1/play store.png" alt="">
+                    <h4>Download the Meesho App</h4>
+                </div>
+            </div>
+            <img src="/static/images/1/main img.webp" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="sec_container">
+            <hr>
+            <h1>Top Categories to choose from</h1>
+            <hr>
+        </div>
+        <div class="sec_container_img">
+            <div class="sec_first_img">
+                <a href="#"><img src="/static/images/2/women.webp" alt=""></a>
+            </div>
+            <div class="sec_first_con">
+                <div class="sec_con">
+                    <h1>Be Fashion Forward</h1>
+                </div>
+                <div class="sec_img">
+                    <a href="#"><img src="/static/images/2/men.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/2/kid.webp" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="three_col_img">
+            <div class="three_container">
+                <h1>Essentials</h1>
+                <a href="#"><img src="/static/images/3/view all.webp" alt=""></a>
+            </div>
+            <div class="three_imgs">
+                <div class="three_first_img">
+                    <a href="#"><img src="/static/images/3/home.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/3/home label.webp" alt=""></a>
+                </div>
+                <div class="three_sec_img">
+                    <a href="#"><img src="/static/images/3/kitchen.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/3/kitchen label.webp" alt=""></a>
+                </div>
+                <div class="three_three_img">
+                    <a href="#"><img src="/static/images/3/health.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/3/helth label.webp" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="four_col_img">
+            <div class="four_container">
+                <h1>New Styles</h1>
+                <a href="#"><img src="/static/images/4/viewall.webp" alt=""></a>
+            </div>
+            <div class="four_imgs">
+                <div class="four_first_img">
+                    <a href="#"><img src="/static/images/4/acc.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/4/acclabel.webp" alt=""></a>
+                </div>
+                <div class="four_sec_img">
+                    <a href="#"><img src="/static/images/4/footwear.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/4/footwear label.webp" alt=""></a>
+                </div>
+                <div class="four_three_img">
+                    <a href="#"><img src="/static/images/4/electronics.webp" alt=""></a>
+                    <a href="#"><img src="/static/images/4/electronics label.webp" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="online_container">
+            <h2>Become a Reseller and</h2><br>
+            <h1>Start your Online Business</h1>
+            <h1>with Zero Investment</h1><br><br>
+            <div class="online_img">
+                <a href="#"><img src="/static/images/5/play.webp" alt=""></a>
+                <a href="#"><img src="/static/images/5/apple.webp" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="register_con">
+            <h1>Register as a Meesho Supplier</h1>
+            <p>Sell your products to crores of customers at 0% commission</p><br>
+            <div class="register_icon">
+                <h4><i class="fa fa-check-circle"></i>&nbsp;&nbsp;&nbsp;Grow your business 10x</h4>
+                <h4><i class="fa fa-check-circle"></i>&nbsp;&nbsp;&nbsp;Enjoy 100% Profit</h4>
+                <h4><i class="fa fa-check-circle"></i>&nbsp;&nbsp;&nbsp;Sell all over India</h4>
+            </div><br>
+            <a href="#">Sign up now</a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="product">
+            <h1>Products For You</h1>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="shoes_con">
+            <div class="check">
+                <div class="check_box">
+                    <p>Sort by: Relevance</p><i class="fa fa-angle-down"></i>
+                </div><br>
+                <div class="filter">
+                    <h3>Filters</h3>
+                    <p>1000+ Products</p>
+                </div><br>
+                <hr>
+                <div class="check_box">
+                    <h3>Category</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Gender</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Color</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Fabric</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Dial Shape</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Size</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Price</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Rating</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Occassion</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Kurta Fabric</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Dupatta Color</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Combo</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Discount</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Reversible</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Used For</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Smartcoins</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Body Meterial</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <!-- <div class="check_box">
+                    <h3>Meesho Gold</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Meesho Mall</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Fit/Shape</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Meterial</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Bottom Lenght</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Print or Pattern Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Bottom Style</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Bottomwear Fabric</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Ornamentation</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Bottom Pattern Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Border</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Surface Styling</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Back Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Top Pattern</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Inner Fabric</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Loom Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Top Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Brand</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Compatible Models</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Warranty Period</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Waist Rise</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Bottom Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Heel Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Dial Design</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Concern</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Padding</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Frame Color</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Frame Meterial</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>lens Meterial</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Frame Style</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Frame Type</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Card Slot</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>No Of Compartments</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Base Metal</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr>
+                <div class="check_box">
+                    <h3>Frame Style</h3><i class="fa fa-angle-down"></i>
+                </div>
+                <hr> -->
+            </div>
+
+
+            <div class="shoes">
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes1')}}"><img src="/static/images/shoes/img (1).webp" alt=""></a>
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes2')}}"><img src="/static/images/shoes/img (2).webp" alt=""></a>
+                        <p>Stylish Sports Shoes For Men</p>
+                        <div class="shoes_price">
+                            <h3>₹300</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes3')}}"><img src="/static/images/shoes/img (3).webp" alt=""></a>
+                        <p>ITALIAN KICKS Running Sports</p>
+                        <div class="shoes_price">
+                            <h3>₹225</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes4')}}"><img src="/static/images/shoes/img (4).webp" alt=""></a>
+                        <p>Grey Bolt Mesh Sports Shoes For Men</p>
+                        <div class="shoes_price">
+                            <h3>₹376</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes5')}}"><img src="/static/images/shoes/img (5).webp" alt=""></a>
+                        <p>Density Sports Shoes for Men</p>
+                        <div class="shoes_price">
+                            <h3>₹331</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes6')}}"><img src="/static/images/shoes/img (6).webp" alt=""></a>
+                        <p>Trending Comfortable Shoes For Men</p>
+                        <div class="shoes_price">
+                            <h3>₹317</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes7')}}"><img src="/static/images/shoes/img (7).webp" alt=""></a>
+                        <p>Fashionable Men Sport Shoes</p>
+                        <div class="shoes_price">
+                            <h3>₹399</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes8')}}"><img src="/static/images/shoes/img (8).webp" alt=""></a>
+                        <p>Gym Sports Shoes For Men</p>
+                        <div class="shoes_price">
+                            <h3>₹493</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes9')}}"><img src="/static/images/shoes/img (9).webp" alt=""></a>
+                        <p>Walking Shoes For Men</p>
+                        <div class="shoes_price">
+                            <h3>₹269</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes10')}}"><img src="/static/images/shoes/img (10).webp" alt=""></a>
+                        <p>Running Shoes For Men</p>
+                        <div class="shoes_price">
+                            <h3>₹450</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes11')}}"><img src="/static/images/shoes/img (11).webp" alt=""></a>
+                        <p>Fhonex Sport 99 Black Sports Shoes</p>
+                        <div class="shoes_price">
+                            <h3>₹357</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <a href="{{url_for('single_shoes12')}}"><img src="/static/images/shoes/img (12).webp" alt=""></a>
+                        <p>Men's Sports Shoes Comfrotable</p>
+                        <div class="shoes_price">
+                            <h3>₹324</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (13).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (14).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (15).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (16).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (17).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (18).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (19).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (20).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (21).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (22).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (23).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (24).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (25).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (26).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (27).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (28).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (29).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (30).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (31).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (32).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (33).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (34).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (35).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (36).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (37).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (38).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (39).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (40).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (41).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (42).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (43).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (44).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (45).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (46).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (47).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (48).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (49).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (50).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (51).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (52).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (53).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (54).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (55).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (56).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (57).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (58).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (59).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (60).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (61).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (62).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (63).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (64).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (65).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (66).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (67).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (68).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (69).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (70).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (71).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (72).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (73).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (74).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (75).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (76).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (77).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (78).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (79).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (80).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (81).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (82).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (83).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (84).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (85).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (86).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (87).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (88).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (89).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (90).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (91).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (92).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (93).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (94).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (95).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (96).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="shoes_row">
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (97).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (98).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (99).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>
+
+                    <div class="shoes_col">
+                        <img src="/static/images/shoes/img (100).webp" alt="">
+                        <p>Birde Classy Casual Men's</p>
+                        <div class="shoes_price">
+                            <h3>₹516</h3>
+                            <sup>₹605</sup>
+                            <p>15%off</p>
+                        </div>
+                        <h4>Free Delivery</h4>
+                        <div class="shoes_rate">
+                            <div class="shoes_ic">
+                                <h2 class="rate">3.7</h2>&nbsp;&nbsp;&nbsp;<i class="fa fa-star"></i>
+                            </div>
+                            <p>1524 Reviews</p>
+                        </div>
+                    </div>   -->
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

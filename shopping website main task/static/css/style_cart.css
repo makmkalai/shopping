@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(151, 174, 175);    
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content:end;
+}
+.navbar a{
+    font-size: 25px;
+}
+.navbar a:hover{
+    color: rgb(54, 31, 31);
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    color:  rgb(80, 120, 160);
+    letter-spacing: 4px;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: end;
+    padding: 0 30px;
+    color:  white;
+    letter-spacing: 4px;
+}
+
+.table_container{
+    padding: 30px 50px;
+}
+table{
+    border-radius: 10px;
+}
+table th{
+    font-size: 18px;
+    text-align: center;
+
+}
+table td{
+    font-size: 17px;
+    text-align: center;
+    
+}
+table tr:hover{
+    color: rgb(132, 133, 199);    
+}
+#dlt{
+    font-size: 17px;
+    padding: 3px 5px;
+}
+
+
+.btn{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.total{
+    font-size: 20px;   
+    color: rgb(105, 79, 223);
+}

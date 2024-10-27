@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav_container">
+        <nav class="first_nav">
+            <div class="title">
+                <a href="#"><img src="/static/images/meeshoLogo.svg" alt=""></a>
+            </div>
+            <div class="form">
+                <form>
+                    <input type="search" name="search" placeholder="Try Saree,Kurti or search by Product Code">
+                </form>
+            </div>
+            <div class="dwn">
+                <ul>
+                    <li><a href="#"><i class="fa fa-mobile">&nbsp;&nbsp;</i>Download App</a>
+                        <ul>
+                            <div class="dwn_app">
+                                <li><Span>Download Form</Span></li><br>
+                                <li><a href="#"><img src="/static/images/first navbar/playstore.png" alt=""></a></li>
+                                <br>
+                                <li><a href="#"><img src="/static/images/first navbar/appstore.png" alt=""></a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <a href="#">Become a Supplier</a>
+            <a href="#">Newsroom</a>
+            <div class="profile">
+                <div class="profile_icon">
+                    <ul>
+                        <li>
+                            <div class="pro">
+                                <i class="fa fa-user-circle"></i>
+                                <a href="#">Profile</a>
+                            </div>
+                            <ul>
+                                <div class="profile_icon_signup">
+                                    <div class="signup">
+                                        <li>
+                                            <h3>Hello User</h3>
+                                        </li>
+                                        <li>
+                                            <p>Meesho account</p>
+                                        </li>
+                                        <li><a class="sign_btn" href="#">{{session['username']}}</a></li>
+                                        <hr>
+                                        <li><a href="#"><i class="fa fa-shopping-bag"></i>&nbsp;&nbsp;My Order</a></li>
+                                        <hr>
+                                        <li><a class="dlt_acc" href="{{url_for('logout')}}">Logout</a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+            </div>
+            <div class="cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <a href="{{url_for('shopping_cart')}}">Cart</a>
+            </div>
+        </nav>
+    
+    </div>
+    <hr>
+    
+    <div class="nav_container">
+        <nav class="sec_nav">
+            <ul class="first_ul">
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Women Ethnic</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>All Women Ethnic</span></li>
+                                <li><a href="#">View All</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Sarees</span></li>
+                                <li><a href="#">All Sarees</a></li>
+                                <li><a href="#">Silk Sarees</a></li>
+                                <li><a href="#">Cotton Silk Sarees</a></li>
+                                <li><a href="#">Cotton Sarees</a></li>
+                                <li><a href="#">Georgette Sarees</a></li>
+                                <li><a href="#">Chiffon Sarees</a></li>
+                                <li><a href="#">Satin Sarees</a></li>
+                                <li><a href="#">Embroidered Sarees</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Kurtis</span></li>
+                                <li><a href="#">All Kurtis</a></li>
+                                <li><a href="#">Anarkali Kurtis</a></li>
+                                <li><a href="#">Rayon Kurtis</a></li>
+                                <li><a href="#">Cotton Kurtis</a></li>
+                                <li><a href="#">Embriudered Kurtis</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Kurta sets</span></li>
+                                <li><a href="#">All Kurta Sets</a></li><br>
+                            </div>
+                            <div class="five">
+                                <li><span>Suits & Dress Meterial</span></li>
+                                <li><a href="#">All Suits & Dress Meterial</a></li>
+                                <li><a href="#">Cotton Suits</a></li>
+                                <li><a href="#">Embroidered Suits</a></li>
+                                <li><a href="#">chanderi Suits</a></li><br>
+                            </div>
+                            <div class="six">
+                                <li><span>Other Ethnic</span></li>
+                                <li><a href="#">Blouses</a></li>
+                                <li><a href="#">Dupattas</a></li>
+                                <li><a href="#">Lehanga</a></li>
+                                <li><a href="#">Gown</a></li>
+                                <li><a href="#">Ethnic Bottomwear</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Women Western</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Topwear</span></li>
+                                <li><a href="#">Tops</a></li>
+                                <li><a href="#">Dresses</a></li>
+                                <li><a href="#">Sweaters</a></li>
+                                <li><a href="#">Jumpsuits</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Bottomwear</span></li>
+                                <li><a href="#">Jeans</a></li>
+                                <li><a href="#">jeggings</a></li>
+                                <li><a href="#">Palazzos</a></li>
+                                <li><a href="#">Shorts</a></li>
+                                <li><a href="#">Skirts</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Innerwear</span></li>
+                                <li><a href="#">Bra</a></li>
+                                <li><a href="#">Briefs</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Sleepwear</span></li>
+                                <li><a href="#">Nightsuits</a></li>
+                                <li><a href="#">Babydolls</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Men</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Top Wear</span></li>
+                                <li><a href="#">All Top Wear</a></li>
+                                <li><a href="#">Tshirts</a></li>
+                                <li><a href="#">Shirts</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Bottom Wear</span></li>
+                                <li><a href="#">Track Pants</a></li>
+                                <li><a href="#">Jeans</a></li>
+                                <li><a href="#">Trousers</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Men Accessories</span></li>
+                                <li><a href="#">All Men Accessories</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Belts</a></li>
+                                <li><a href="#">Wallets</a></li>
+                                <li><a href="#">Jewellery</a></li>
+                                <li><a href="#">Sunglasses</a></li>
+                                <li><a href="#">Bags</a></li><br>
+                            </div>
+                            <div class="five">
+                                <li><span>Men Footwear</span></li>
+                                <li><a href="#">Casual Shoes</a></li>
+                                <li><a href="#">Sports Shoes</a></li>
+                                <li><a href="#">Sandals</a></li>
+                                <li><a href="#">Formal Shoes</a></li><br>
+                            </div>
+                            <div class="six">
+                                <li><span>Ethnic Wear</span></li>
+                                <li><a href="#">Men Kurtas</a></li>
+                                <li><a href="#">Ethnic Jackets</a></li><br>
+                            </div>
+                            <div class="seven">
+                                <li><span>Inner & Sleep Wear</span></li>
+                                <li><a href="#">All Inner & Sleep Wear</a></li>
+                                <li><a href="#">Vests</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">kids</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Boys & Girls 2+ Years</span></li>
+                                <li><a href="#">Dresses</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Infant 0-2 Years</span></li>
+                                <li><a href="#">Rompers</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Toys & Accessories</span></li>
+                                <li><a href="#">Soft Toys</a></li>
+                                <li><a href="#">Footwear</a></li>
+                                <li><a href="#">Stationery</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Bags & Backpacks</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Baby Care</span></li>
+                                <li><a href="#">All Baby Care</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Home & Kitchen</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Home Furnishing</span></li>
+                                <li><a href="#">Bedsheets</a></li>
+                                <li><a href="#">Doormats</a></li>
+                                <li><a href="#">Curtains & Sheers</a></li>
+                                <li><a href="#">Cushions & Cushion Covers</a></li>
+                                <li><a href="#">Mattress Protectors</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Home Decor</span></li>
+                                <li><a href="#">All Home Decor</a></li>
+                                <li><a href="#">Stickers</a></li>
+                                <li><a href="#">Clocks</a></li>
+                                <li><a href="#">Showpieces</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Kitchen & Dining</span></li>
+                                <li><a href="#">Kitchen Storage</a></li>
+                                <li><a href="#">Cookware & Bakeware</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Beauty & Health</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Make up</span></li>
+                                <li><a href="#">Face</a></li>
+                                <li><a href="#">Eyes</a></li>
+                                <li><a href="#">Lips</a></li>
+                                <li><a href="#">Nails</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Wellness</span></li>
+                                <li><a href="#">Sanitizers</a></li>
+                                <li><a href="#">Oral Care</a></li>
+                                <li><a href="#">Feminine Hygiene</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Skincare</span></li>
+                                <li><a href="#">Deodorants</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Jewellery & Accessories</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Jewellery</span></li>
+                                <li><a href="#">Jewellery Set</a></li>
+                                <li><a href="#">Earrings</a></li>
+                                <li><a href="#">Mangalsutras</a></li>
+                                <li><a href="#">Studs</a></li>
+                                <li><a href="#">Bangles</a></li>
+                                <li><a href="#">Necklaces</a></li>
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Anklets</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Women Accessory</span></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Watches</a></li>
+                                <li><a href="#">Hair Accessories</a></li>
+                                <li><a href="#">Sunglasses</a></li>
+                                <li><a href="#">Socks</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Bags & Footwear</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Women Bags</span></li>
+                                <li><a href="#">All Women Bags</a></li>
+                                <li><a href="#">Handbags</a></li>
+                                <li><a href="#">Clutches</a></li>
+                                <li><a href="#">Slingbags</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Men Bags</span></li>
+                                <li><a href="#">All Men Bags</a></li>
+                                <li><a href="#">Men Wallets</a></li><br>
+                            </div>
+                            <div class="three">
+                                <li><span>Men Footwear</span></li>
+                                <li><a href="#">Sports Shoes</a></li>
+                                <li><a href="#">Casual Shoes</a></li>
+                                <li><a href="#">Formal shoes</a></li>
+                                <li><a href="#">Sandals</a></li><br>
+                            </div>
+                            <div class="four">
+                                <li><span>Women Footwear</span></li>
+                                <li><a href="#">Flats</a></li>
+                                <li><a href="#">Bellies</a></li>
+                                <li><a href="#">Juttis</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec_nav_head">
+                        <a href="#">Electronics</a>
+                    </div>
+                    <div class="sub_drop">
+                        <ul>
+                            <div class="one">
+                                <li><span>Mobile & Accessories</span></li>
+                                <li><a href="#">All Mobile & Accessories</a></li>
+                                <li><a href="#">Smartwatches</a></li>
+                                <li><a href="#">Mobile Holders</a></li>
+                                <li><a href="#">Mobile Cases and Covers</a></li><br>
+                            </div>
+                            <div class="two">
+                                <li><span>Appliances</span></li>
+                                <li><a href="#">All Appliances</a></li>
+                                <li><a href="#">Grooming</a></li>
+                                <li><a href="#">Home Applliances</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <hr>
+    
+    <div class="single_shoes">
+        <div class="single_img">
+            <img src="/static/images/shoes/img (3).webp" alt="">
+            <div class="single_shoes_cart">
+                <a class="add" href="{{url_for('cart3')}}"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;Add to
+                    Cart</a>
+                <a class="buy" href="#"><span><i class="fa fa-angle-double-right">&nbsp;&nbsp;&nbsp;</i>Buy
+                        Now</span></a>
+
+            </div>
+        </div>
+        <div class="single_con">
+            <div class="single_col">
+                <p>ITALIAN KICKS Running Sports</p><br>
+                <div class="single_price">
+                    <h3>₹225</h3>
+                    <sup>₹605</sup>
+                    <p>15%off</p>
+                    <i class="fa fa-info-circle"></i>
+                </div><br>
+                <div class="single_rate">
+                    <div class="single_ic">
+                        <h2 class="single_rate">3.7</h2>
+                        &nbsp;&nbsp;&nbsp;
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>1524 Reviews</p>
+                </div><br>
+                <h4>Free Delivery</h4> <br>
+                <hr>
+                <br>
+                <h2>Select Size</h2><br>
+                <div class="single_size">
+                    <h3>IND-6</h3>
+                    <h3>IND-7</h3>
+                    <h3>IND-8</h3>
+                    <h3>IND-9</h3>
+                    <h3>IND-10</h3>
+                </div><br>
+                <h2>Product Details</h2><br>
+                <div class="single_pro_details">
+                    <p>Name : BIRDE ZenG Men Sport Memory Foam Comfortable Soft Lightweght
+                        Regular Wear Walking Shoes <br>
+
+                        Material : Mesh <br>
+
+                        Sole Material : PVC <br>
+
+                        Fastening & Back Detail : Lace-Up <br>
+
+                        Pattern : Solid <br>
+
+                        Net Quantity (N) : 1 <br>
+
+                        Exclusive design and durable materials every step feels light and breezy. Breathable,
+                        free-moving fabrics which adjust according to your foot and creates an astoundingly easy-going
+                        experience. These stylish shoes are the perfect inspiration for a fashionable look. Designed to
+                        offer comfort at its best, without compromising on style. Made for long-term wear, with extra
+                        emphasis on providing cushion to the feet, removing heel strain.
+
+                        Sizes :
+
+                        IND-7, IND-8, IND-9, IND-10
+
+                        Country of Origin : India
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
